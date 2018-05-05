@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  </script>
+  <script>
+    $(document).ready(function(){ 
+      $('#Header').load("header.html"); 
+      $('#Footer').load("footer.html");
+
+      setTimeout(function(){
+        $('body').css("display","block");
+      },500);
+    });
+  </script>
+</head>
+
+<body style="display:none">
+  <!-- Header Start -->
+  <div id="Header">
+  </div>
+  <!-- header close -->
+
+  <!-- Slider Start -->
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h1><b>Our Results</b></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result1.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px">Figure 1: Recognizing students’ faces</p>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12">
+          <div class="block">
+            <p style="text-align:justify">
+              From the figure 1, one can notice that the face of the left and right student can be recognized by the system where the Student
+              ID is shown on top of the bounding box. While the ID of the student in the middle is unable to be recognized
+              due to the head position which is not frontal parallel to the camera.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result4.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 2: Detected students’Upper Body
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result5.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 3: Detected student’s Full Body
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result2.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 4: The red dot in the image indicate the track of the student when he enters the classroom and sit down which determined
+              by the Optical Flow.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result3.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 5: The red dot in the image indicate the track of the student when he stand up and move towards the door which determined
+              by the Optical Flow.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result7.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 6: An example of overall interface of our system with students identification for attendance taking
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="block">
+            <img class="img-rounded" src="img/result6.png" alt="Img" style="padding:32px 0px 0px 0px;">
+            <p style="padding-top:0px;text-align:center;font-size:12px;line-height:20px">
+              Figure 7: An example of the analysis of concentration level in the class
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- footer Start -->
+  <div id="Footer">
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <style>
+    /* Style the Image Used to Trigger the Modal */
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+    /* Modal Content (Image) */
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    /* Add Animation - Zoom in the Modal */
+
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+      to {
+        transform: scale(1)
+      }
+    }
+    /* The Close Button */
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+
+<!-- 
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script> -->
+</body>
+
+</html>

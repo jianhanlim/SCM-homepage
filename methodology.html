@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+  </script>
+  <script>
+    $(document).ready(function(){ 
+      $('#Header').load("header.html"); 
+      $('#Footer').load("footer.html");
+
+      setTimeout(function(){
+        $('body').css("display","block");
+      },500);
+    });
+  </script>
+</head>
+
+<body style="display:none">
+  <!-- Header Start -->
+  <div id="Header">
+  </div>
+  <!-- header close -->
+
+  <!-- Slider Start -->
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h1><b>Face Detection and Recognition Module</b></h1>
+            <p>To detect and recognize the students' face for identification purpose</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>Face Detection and Recognition</h2>
+              <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p> -->
+            </div>
+            <p style="text-align:justify">
+              This module consists of three main steps, which are <i>image
+              preprocessing</i>, <i>face detection</i> and <i>face recognition</i>. In image preprocessing, the image captured
+              from the camera will be denoised, resized if necessary, and converted into grayscale to ease the later processing.
+              Haar Cascade Face detection algorithm is then applied to detect the faces in the classroom while the <b>Eigenface</b>              and <b>Fisherface</b> approaches will be used to train and recognize student faces. This work combined both
+              Eigenfaces and Fisherfaces algorithms to achieve better performance in face recognition.
+            </p>
+            <div class="row">
+              <div class="col-md-7">
+                <p style="color:black"><b>Eigenfaces Algorithm</b></p>
+                <blockquote style="text-align:justify;font-family: 'Open Sans', sans-serif;font-size:13px;color: #7B7B7B;line-height: 20px;">
+                  Eigenfaces approach uses Principle Component Analysis (PCA) to find the dimensional direction with the greatest variance
+                  between projected data samples, and the orthogonal eigenvectors to the dimension. This approach follows
+                  the three basic steps to perform face recognition, where first project all the training samples into PCA
+                  subspace, then projects all the query images into PCA subspace and identify by evaluate the closest neighbor
+                  between the projected training images and query images.
+                </blockquote>
+                <p style="color:black"><b>Fisherfaces Algorithm</b></p>
+                <blockquote style="text-align:justify;font-family: 'Open Sans', sans-serif;font-size:13px;color: #7B7B7B;line-height: 20px;">
+                  Fisherfaces approach uses Linear Discriminant Analysis (LDA) method to reduce the variance between image space classes, and
+                  tightly group those similar groups together to maximize the separation between different projected classes.
+                </blockquote>
+              </div>
+              <div class="col-md-5 col-sm-12">
+                <div class="block">
+                  <img class="img-rounded" src="https://www.cse.wustl.edu/~furukawa/cse559a/2016_fall/project3/teaser.jpg" alt="Img" style="padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h1><b>Motion Analysis Module</b></h1>
+            <p>To track and analyse students' motion such as sitting, standing, concentrating and etc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>Motion Analysis</h2>
+              <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p> -->
+            </div>
+            <p style="text-align:justify">
+              Motion analysis module consist of three main functions, which are <i>body detection</i>, <i>motion tracking</i>              and <i>motion recognition</i>. For body detection, we detect upper body and full body of students with cascade
+              classifier and Histogram of Oriented Gradients (HOG) respectively. Both upper and full body is considered in
+              this work because students can be seated or standing in a classroom. In this work, we trained a cascade classifier
+              of human upper body (head and shoulder) and use it to detect the upper body of students in the classroom.
+            </p>
+            <div class="row">
+              <div class="col-md-5 col-sm-12">
+                <div class="block">
+                  <img id="myImg" src="img/rule.png" alt="Img" style="padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <p style="text-align:justify">
+                  As for the full body, it will be detected by using HOG detector where the object appearance and shape within an image can
+                  be described by the distribution of intensity gradients or edge directions. Both upper body and full body
+                  detection is then integrated in order to assist human motion tracking and human motion recognition.
+                  <br/><br/>In motion tracking, feature-based tracking with Lucas- Kanade sparse optical flow approach is
+                  used to determine and track the students’ motion. This method assumes that the displacement of the motion
+                  between two images is small and solves the optical flow equations by the least squares criterion. For motion
+                  recognition, it recognize students entering or leaving the classroom by using rules in Table 1.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h1><b>Behavioural Analysis Module</b></h1>
+            <p>To analyse and evaluate students’ behavior, concentration level and performance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>Behavioural Analysis</h2>
+              <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p> -->
+            </div>
+            <p style="text-align:justify">
+              This module fully utilize the data collected from face recognition and motion analysis to analyze the students’ behavior.
+              Different metrics are proposed to calculate and evaluate the attendance level and concentration level of students.
+            </p>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="block">
+                  <img src="img/eq1.png" alt="Img" style="max-width:300px;padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <p style="text-align:justify">
+                  1) <b>Level of presence in class (P<sub>x</sub>)</b>: Equation (1) show the metric to calculate the level
+                  of presence of a student in the class by computing the percentage of total time of a particular student
+                  appear on the screen, t<sub>x</sub> over the class duration T. The purpose of this metric is to determine
+                  the percentage of the student appear in front of the camera in a class in order to obtain their attendance
+                  status.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="block">
+                  <img src="img/eq2.png" alt="Img" style="max-width:300px;padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <p style="text-align:justify">
+                  2) <b>Attendance status, A<sub>x</sub></b>: Equation (2) evaluate the attendance status of a student. If
+                  a student appear in front of the screen for more than 50% of the total duration of a class, then the student
+                  is consider as presence in that class and vise versa. The purpose of this evaluation is to ensure that
+                  the student who leave the class frequently or sneak out from the class half way will not marked as presence
+                  in the class.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="block">
+                  <img src="img/eq3.png" alt="Img" style="max-width:300px;padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <p style="text-align:justify">
+                  3) <b>Concentration level of student, C<sub>s</sub> </b>: Equation (3) show the metric to calculate the
+                  concentration level of a student in a class by computing the percentage of R1 case (please refer to Table
+                  I) of a student, r<sub>x</sub> over the total number of students upper body detected on the screen, b<sub>x</sub>.
+                  This metric assumes that if a particular student’s face is not recognized on the screen but the upper body
+                  is detected on the screen, the student face might be facing other direction which leads to other activities
+                  such as playing phone, chatting with friends, or sleeping on the table.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="block">
+                  <img src="img/eq4.png" alt="Img" style="max-width:300px;padding:32px 0px 0px 0px;">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <p style="text-align:justify">
+                  4) <b>Overall concentration level of a class, C<sub>overall</sub></b>: To evaluate the effectiveness of
+                  the class, we propose (4) to obtain the overall attention of students in a class by computing the total
+                  concentration level of students over the total number of students attended the class. If a student does
+                  not attend the class, the student will not affect the overall concentration level of students in a class.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer Start -->
+  <div id="Footer">
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <style>
+    /* Style the Image Used to Trigger the Modal */
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+    /* Modal Content (Image) */
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    /* Add Animation - Zoom in the Modal */
+
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+      to {
+        transform: scale(1)
+      }
+    }
+    /* The Close Button */
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+  <!-- <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script> -->
+</body>
+
+</html>

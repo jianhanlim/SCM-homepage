@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+  <head>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script>
+      $(document).ready(function(){ 
+        $('#Header').load("header.html"); 
+        $('#Footer').load("footer.html");
+  
+        setTimeout(function(){
+          $('body').css("display","block");
+        },500);
+      });
+    </script>
+  </head>
+  
+  <body style="display:none">
+    <!-- Header Start -->
+    <div id="Header">
+    </div>
+    <!-- header close -->
+
+  <!-- Slider Start -->
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h1><b>Meet Our Team</b></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+          <div class="team-member">
+            <div class="team-img">
+              <img style="height: 263px;" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAwTAAAAJGU0MDI3ZjJhLTlhNjAtNGRlNC05ZjJmLTIxYjA3MjNmM2FiZg.jpg"
+                alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4>Hi There !</h4>
+                <p>I love to introduce myself as SCM Project Supervisor</p>
+              </div>
+              <div class="s-link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Dr Lim Chern Hong</h5>
+            <span>Project Supervisor</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <div class="team-member">
+            <div class="team-img">
+              <img style="height: 263px;" src="img/jh.jpg" alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4>Hi There !</h4>
+                <p>I love to introduce myself as SCM Project Leader.</p>
+              </div>
+              <div class="s-link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Lim Jian Han</h5>
+            <span>Project Leader</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <div class="team-member">
+            <div class="team-img">
+              <img style="height: 263px;" src="https://scontent.fkul3-1.fna.fbcdn.net/v/t1.0-9/21370963_1540948419276888_7280332725917740562_n.jpg?oh=84fefa9a582c19adf4be1e0e0ad3e823&oe=5A514E8D"
+                alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4>Hi There !</h4>
+                <p>I love to introduce myself as SCM Algorithm Designer.</p>
+              </div>
+              <div class="s-link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Kelvin Teh Eng Yeow</h5>
+            <span>Program & Algorithm Designer</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <div class="team-member">
+            <div class="team-img">
+              <img style="height: 263px;" src="https://scontent.fkul3-1.fna.fbcdn.net/v/t1.0-9/1918229_1097729656913401_689192269514676604_n.jpg?oh=8456870ae39f14b72bdbddc6d9279ad5&oe=5A4A47B7"
+                alt="team member" class="img-responsive">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4>Hi There !</h4>
+                <p>I love to introduce myself as SCM User Interface Designer.</p>
+              </div>
+              <div class="s-link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Geh Ming Han</h5>
+            <span>User Interface Designer</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- footer Start -->
+  <div id="Footer">
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <style>
+    /* Style the Image Used to Trigger the Modal */
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+    /* Modal Content (Image) */
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    /* Add Animation - Zoom in the Modal */
+
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+      to {
+        transform: scale(1)
+      }
+    }
+    /* The Close Button */
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+  <style>
+    .team-member,
+    .team-member .team-img {
+      position: relative;
+    }
+
+    .team-member {
+      overflow: hidden;
+    }
+
+    .team-member,
+    .team-member .team-img {
+      position: relative;
+    }
+
+    .team-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      border: 20px solid rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.90);
+      opacity: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .team-member:hover .team-hover .desk {
+      top: 35%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+      opacity: 1;
+    }
+
+    .team-hover .desk {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+      transform: translateY(-55%);
+      -webkit-transition: all 0.3s 0.2s;
+      transition: all 0.3s 0.2s;
+      padding: 0 20px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+      text-align: center;
+      color: #222;
+    }
+
+    .team-member:hover .team-hover .s-link {
+      bottom: 10%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+      opacity: 1;
+    }
+
+    .team-hover .s-link {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      text-align: center;
+      -webkit-transform: translateY(45%);
+      -ms-transform: translateY(45%);
+      transform: translateY(45%);
+      -webkit-transition: all 0.3s 0.2s;
+      transition: all 0.3s 0.2s;
+      font-size: 35px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+      text-align: center;
+      color: #222;
+    }
+
+    .team-member .s-link a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .team-title {
+      position: static;
+      padding: 20px 0;
+      display: inline-block;
+      letter-spacing: 2px;
+      width: 100%;
+    }
+
+    .team-title h5 {
+      margin-bottom: 0px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .team-title span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #a5a5a5;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <!-- <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script> -->
+</body>
+
+</html>

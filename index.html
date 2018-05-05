@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script>
+      $(document).ready(function(){ 
+        $('#Header').load("header.html"); 
+        $('#Footer').load("footer.html");
+
+        setTimeout(function(){
+         $('body').css("display","block");
+        },500);
+      });
+    </script>
+</head>
+
+<body style="display:none">
+  <!-- Header Start -->
+  <div id="Header">
+  </div>
+  <!-- header close -->
+
+  <!-- Slider Start -->
+  <section id="slider" style="padding:150px 0px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block" style="text-align:center">
+            <h1 style="font-weight:bold" class="animated fadeInUp">Smart Classroom Management System</h1>
+            <p class="animated fadeInUp">An automated system integrated with connected camera and computer vision based processing unit to assist the
+              instructor in managing classroom activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Wrapper Start -->
+  <section id="intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>INTRODUCTION</h2>
+              <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p> -->
+            </div>
+            <p style="text-align:justify">
+              Internet of Things (IoT) with the concept of integrating
+              connectivity, sensors, data analysis and decision making in an
+              underlying framework has ease many real world problems. In this
+              work, we study the application of IoT for education purpose. 
+              <br/><br/>Student’s
+              behavior and performance in the class is always the main
+              concern of every educator. The instructors are responsible to
+              ensure the smoothness of the classroom activities alongside with
+              monitoring the students’ attendance, attention, and activities like
+              entering or leaving the classroom. Manual observation on these
+              could affect the teaching and learning process and causes the
+              distraction from the main syllabus. 
+              <br/><br/>With the incorporation of IoT
+              devices and computational algorithms such as computer vision
+              techniques, machine learning and data analysis, it can ease the
+              monitoring task and the analysis of students’ performance in the
+              class. In advance, it can perform automated real-time observation
+              on the student’s behavior through network and react immediately
+              to critical situation if necessary. Nonetheless, the students’ longterm
+              performance can be recorded and the data can be used for
+              continuous assessment in the future. 
+              <br/><br/>In this work, we propose
+              an IoT framework that focused on three analysis modules: face
+              recognition, motion analysis, and behaviour understanding to
+              effectively perform classroom monitoring tasks such as taking
+              attendance, identify entering and leaving activities and analyse
+              the students concentration level.
+            </p>
+          </div>
+        </div>
+        <!-- .col-md-7 close -->
+        <div class="col-md-5 col-sm-12">
+          <div class="block">
+            <img src="img/logo.png" alt="Img" style="padding:32px 0px 0px 0px;">
+          </div>
+          <div class="embed-responsive embed-responsive-16by9" style="margin-top:15px">
+            <iframe src="https://www.youtube.com/embed/n-U-yRi0cjs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!-- .col-md-5 close -->
+      </div>
+    </div>
+  </section>
+
+  <section id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-6" style="background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        opacity: 0.95;">
+          <h2>OBJECTIVES</h2>
+          <p>&bull;&nbsp;To implement a unified system to recognize students, track students’ motion and analyse the behaviour of students in a class room.</p>
+          <p>&bull;&nbsp;To examine the effectiveness of face detection and recognition algorithms in automated attendance taking.</p>
+          <p>&bull;&nbsp;To integrate human tracking and motion analysis algorithms to determine students activities. </p>
+          <p>&bull;&nbsp;To research a model to evaluate the students’ behaviour in terms of their performance and concentration level.</p>
+          <!-- <a href="#" class="btn btn-view-works">View Works</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Start -->
+  <section id="service">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>METHODOLOGY</h2>
+          <div class="row" style="padding-top:20px">
+            <div class="col-md-6">
+              <img id="myImg" src="img/scm.png" class="img-responsive">
+            </div>
+            <div class="col-md-6" style="text-align:left">
+              <p style="font-style: normal;font-family: inherit;">
+                This diagram shows the overview of Smart Classroom Management System which consists of three main modules:
+                <br/>&emsp;&bull;&nbsp;Face Detection and Recognition Module
+                <br/>&emsp;&bull;&nbsp;Motion Analysis Module
+                <br/>&emsp;&bull;&nbsp;Behavioural Analysis Module
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fa fa-smile-o"></i>
+            <h4>Face Detection and Recognition</h4>
+            <p>To detect and recognize the students' face for identification purpose</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fa fa-blind"></i>
+            <h4>Motion Analysis</h4>
+            <p>To track and analyse students' motion such as sitting, standing, concentrating and etc
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-item">
+            <i class="fa fa-user-o"></i>
+            <h4>Behavioural Analysis</h4>
+            <p>To analyse and evaluate students’ behavior, concentration level and performance
+            </p>
+          </div>
+        </div>
+        <a class="btn btn-default btn-call-to-action" href="methodology.html" style="padding: 15px 35px;
+          border: none;
+          background-color: black;
+          font-size: 15px;
+          color: white;
+          opacity:0.78;
+          margin-top: 30px;">Read More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Call to action Start -->
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <h2>OUR RESULTS</h2>
+            <p>
+              To show the robustness of the this system, we conducted the experiments on face recognition and motion analysis which covered
+              human detection, human motion tracking and human motion recognition on the gathered video dataset.
+            </p>
+            <a class="btn btn-default btn-call-to-action" href="results.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer Start -->
+  <div id="Footer">
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <style>
+    /* Style the Image Used to Trigger the Modal */
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+    /* The Modal (background) */
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+    /* Modal Content (Image) */
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    /* Add Animation - Zoom in the Modal */
+
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+      to {
+        transform: scale(1)
+      }
+    }
+    /* The Close Button */
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  </script>
+
+  <!-- <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script> -->
+</body>
+
+</html>
